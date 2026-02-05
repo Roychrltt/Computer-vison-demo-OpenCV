@@ -15,12 +15,11 @@
 int main(void)
 {
 	CascadeClassifier face_cascade;
-	String path = CASCADEPATH;
 
-	if (!face_cascade.load(path))
+	if (!face_cascade.load(CASCADEPATH))
 	{
 		std::cerr << RED << "Error: Could not load face cascade classifier" << RESET << std::endl;
-		std::cout << "Make sure OpenCV haarcascades are installed" << std::endl;
+		std::cout << "Please make sure OpenCV haarcascades are installed" << std::endl;
 		return 1;
 	}
 
